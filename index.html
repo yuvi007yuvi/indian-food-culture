@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food Culture - Catering Service</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Custom vibrant color scheme */
+        .text-primary {
+            color: #006D77;
+            /* Rich Teal */
+        }
+
+        .text-accent {
+            color: #FF6F61;
+            /* Lively Coral */
+        }
+
+        .text-dark {
+            color: #2A2A2A;
+            /* Deep Charcoal Gray */
+        }
+
+        .text-muted {
+            color: #6C757D;
+            /* Soft Gray-Blue */
+        }
+
+        .bg-hero {
+            background: url('path/to/your/hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: #F4F4F4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .btn-primary {
+            background-color: #006D77;
+            color: #F4F4F4;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #004F55;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100 text-dark">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-lg fixed w-full z-10">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <img src="Screenshot 2024-11-01 225629.png" Indian Food Culture Logo" class="h-10 w-10 mr-3">
+                <h1 class="text-2xl font-bold text-primary">Indian Food Culture</h1>
+            </div>
+            <!-- Burger Menu -->
+            <div class="md:hidden">
+                <button id="burger-menu" class="text-primary focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Nav Links -->
+            <nav id="nav-links" class="hidden md:flex space-x-4">
+                <a href="#about" class="hover:text-accent">About</a>
+                <a href="#menu" class="hover:text-accent">Menu</a>
+                <a href="#services" class="hover:text-accent">Services</a>
+                <a href="#gallery" class="hover:text-accent">Gallery</a>
+                <a href="#contact" class="hover:text-accent">Contact</a>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="space-y-2 p-4">
+                <li><a href="#about" class="block text-dark hover:text-accent">About</a></li>
+                <li><a href="#menu" class="block text-dark hover:text-accent">Menu</a></li>
+                <li><a href="#services" class="block text-dark hover:text-accent">Services</a></li>
+                <li><a href="#gallery" class="block text-dark hover:text-accent">Gallery</a></li>
+                <li><a href="#contact" class="block text-dark hover:text-accent">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center text-center text-white"
+        style="background-image: url('her2.png');">
+        <div class="px-4">
+            <h2 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-in">Delicious Catering for Every Occasion
+            </h2>
+            <p class="text-lg md:text-2xl mb-8" data-aos="fade-up">We bring the taste to your event!</p>
+            <a href="#services" class="btn-primary text-lg font-semibold">Explore Our Services</a>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Image Section -->
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-10">
+                    <img src="https://media.istockphoto.com/id/1286378180/vector/website-information-concept.jpg?s=612x612&w=0&k=20&c=6v9Hcbp0zp5itIPIywobPQF13YsHIQ4j_srF5VbQusY="
+                        alt="About Us" class="w-full rounded-lg shadow-lg">
+                </div>
+                <!-- Content Section -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-primary mb-6">About Indian Food Culture</h2>
+                    <p class="text-lg text-muted leading-relaxed mb-6">
+                        At Indian Food Culture, we are passionate about delivering authentic and delicious Indian
+                        cuisine for all types of events. From weddings to corporate gatherings, our expert chefs craft
+                        each dish with the finest ingredients and utmost care.
+                    </p>
+                    <p class="text-lg text-muted leading-relaxed mb-6">
+                        Our goal is to provide an unforgettable culinary experience, combining traditional flavors with
+                        innovative presentation. We believe that great food brings people together, creating memories
+                        that last a lifetime.
+                    </p>
+                    <a href="#services" class="btn-primary text-lg font-semibold">Learn More About Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- menu section  -->
+    <!-- <section id="menu" class="bg-gray-200 py-6 md:py-8" data-aos="fade-up">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-semibold mb-4 text-primary">Our Menu</h3>
+            <div id="menu-items" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services -->
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary mb-10">Our Services</h2>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 transition transform hover:scale-105">
+                    <div class="mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnVURxevKTlTjl442u9NwmtjRFNQxOOyb8Jg&s"
+                            alt="Catering Service" class="w-16 h-16 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center text-dark mb-2">Full-Service Catering</h3>
+                    <p class="text-center text-muted">We provide complete catering solutions with an array of delicious
+                        menus for weddings, corporate events, and special occasions.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 transition transform hover:scale-105">
+                    <div class="mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxq2UIuGLKAUgRydeVnOG5NtWhUhBaitEZ8Xgcj142oDAC_ds9OfdOw7MMk8qd2590Mcg&usqp=CAU"
+                            alt="Event Planning" class="w-16 h-16 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center text-dark mb-2">Event Planning</h3>
+                    <p class="text-center text-muted">Our expert planners ensure every detail of your event is flawless,
+                        from decor and setup to execution.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 transition transform hover:scale-105">
+                    <div class="mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhVx9dXs986bypnr9rImWjk-FuYK0S_tIwbQ&s"
+                            alt="Custom Menus" class="w-16 h-16 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center text-dark mb-2">Custom Menus</h3>
+                    <p class="text-center text-muted">Tailor your event's menu to suit your tastes and preferences,
+                        ensuring a unique culinary experience.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 transition transform hover:scale-105">
+                    <div class="mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSupJojXSxSQasLlXWOwsmCzPkFOJBWCkvyKQ&s"
+                            alt="Food Delivery" class="w-16 h-16 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center text-dark mb-2">Food Delivery</h3>
+                    <p class="text-center text-muted">Enjoy our top-quality catering dishes delivered straight to your
+                        door, perfect for any casual or formal gathering.</p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 transition transform hover:scale-105">
+                    <div class="mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdfKfzHclxOSkRFDE091ql_4R5pTxfK7ZENw&s"
+                            alt="Personal Chef" class="w-16 h-16 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center text-dark mb-2">Personal Chef</h3>
+                    <p class="text-center text-muted">Hire our professional chefs to cook for intimate gatherings,
+                        delivering a personalized and memorable dining experience.</p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 transition transform hover:scale-105">
+                    <div class="mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQTDq3EUfvOUETkyMmGl_HtNBl1MqtuKbDA&s"
+                            alt="Menu Consultation" class="w-16 h-16 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center text-dark mb-2">Menu Consultation</h3>
+                    <p class="text-center text-muted">Work with our culinary experts to create a perfect menu for your
+                        event, customized to meet your needs and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section id="gallery" class="py-16 bg-white">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+        <h2 class="text-4xl font-bold text-center text-primary mb-10">Our Gallery</h2>
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Image 1 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+1" alt="Delicious Cuisine" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 2 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+2" alt="Indian Dishes" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 3 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+3" alt="Event Catering" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 4 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+4" alt="Fresh Ingredients" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 5 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+5" alt="Chef at Work" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 6 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+6" alt="Buffet Setup" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 7 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+7" alt="Banquet Party" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <!-- Image 8 -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Food+8" alt="Delicious Desserts" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <h2 class="text-4xl font-bold text-center text-primary mb-10">Contact Us</h2>
+            
+        <form class="bg-white p-4 md:p-6 rounded shadow-lg space-y-4">
+            <div>
+                <label for="name" class="block font-semibold text-dark">Name</label>
+                <input type="text" id="name" class="w-full border rounded px-4 py-2" placeholder="Your Name">
+            </div>
+            <div>
+                <label for="email" class="block font-semibold text-dark">Email</label>
+                <input type="email" id="email" class="w-full border rounded px-4 py-2" placeholder="Your Email">
+            </div>
+            <div>
+                <label for="message" class="block font-semibold text-dark">Message</label>
+                <textarea id="message" class="w-full border rounded px-4 py-2" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        &copy; 2024 Indian Food Culture. All Rights Reserved.
+    </footer>
+
+    <!-- AOS Library for Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- JavaScript for Burger Menu -->
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- JavaScript to Fetch and Display Menu Items from TheMealDB API -->
+    <script>
+        async function fetchMenuItems() {
+            try {
+                const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood');
+                const data = await response.json();
+
+                const menuItemsContainer = document.getElementById('menu-items');
+                menuItemsContainer.innerHTML = '';
+
+                data.meals.forEach(meal => {
+                    const menuItem = document.createElement('div');
+                    menuItem.classList.add('bg-white', 'p-4', 'rounded', 'shadow-lg', 'hover:shadow-xl', 'transition');
+
+                    menuItem.innerHTML = `
+                        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="rounded mb-4">
+                        <h4 class="text-xl font-semibold text-dark">${meal.strMeal}</h4>
+                        <p class="text-muted">A delicious seafood dish.</p>
+                    `;
+                    menuItemsContainer.appendChild(menuItem);
+                });
+            } catch (error) {
+                console.error('Error fetching menu items:', error);
+            }
+        }
+
+        fetchMenuItems();
+    </script>
+</body>
+
+</html>
